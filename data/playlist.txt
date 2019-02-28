@@ -17,7 +17,7 @@ Never Gonna Give You Up, Rick Astley, pop, 1987, 6
 Wake Me Up Before You Go-Go, Wham!, pop, 1984, 8
 U Can't Touch This, MC Hammer, pop, 1990, 17
 Ice Ice Baby, Vanilla Ice, pop, 1990, 26
-HollaBack Girl, Gwen Stefani, pop, 2004,
+HollaBack Girl, Gwen Stefani, pop, 2004, 28
 Hooked on a Feeling, Blue Swede Shoes, rock, 1974, 13
 Come and Get Your Love, Redbone, rock, 1973, 4
 Bad, Michael Jackson, pop, 1987, 14
@@ -25,5 +25,6 @@ Rockstar, Post Malone, rap, 2018, 12
 Pompeii, Bastile, pop, 2013, 19
 Holland Road, Mumford and Sons, pop, 2012, 20
 Lonely is the Night, Billy Squier, rock, 1981, 23
-MacArthur Pack, Richard Harris, rock, 1968,
-Suicide is Painless, Johnny Mandel, rock, 1970,
+MacArthur Pack, Richard Harris, rock, 1968, 27
+Suicide is Painless, Johnny Mandel, rock, 1970, 29
+Irish Drinking Song, Da Vinci's Notebook, pop, 2002, 21
