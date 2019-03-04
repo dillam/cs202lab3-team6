@@ -7,46 +7,50 @@ public class Song {
   int rank;
 
   public Song(String name, String artist, String genre, int year, int rank) {
-    this.name = name;
-    this.artist = artist;
+    this.name = name.toUpperCase();
+    this.artist = artist.toUpperCase();
     this.genre = genre;
     this.year = year;
     this.rank = rank;
   }//constructor1
 
+  //return the name
   public String getName() {
     return this.name;
   }
 
+  //return the artist
   public String getArtist() {
     return this.artist;
   }
 
+  //return the genre
   public String getGenre() {
     return this.genre;
   }
 
+  //return the year
   public int getYear() {
     return this.year;
   }
 
+  //return the rank
   public int getRank() {
     return this.rank;
   }
 
-  public char getFirstCharName() {
-    return this.name.charAt(0);
+  //return the ascii value of the character at index i in the name
+  public int getCharName(int i) {
+    return this.name.charAt(i);
   }
 
-  public char getSecCharName() {
-    return this.name.charAt(1);
+  //return the ascii value of the character at index i in the artist
+  public int getCharArtist(int i) {
+    return this.artist.charAt(i);
   }
 
-  public char getFirstCharArtist() {
-    return this.artist.charAt(0);
-  }
-
-  public char getSecCharArtist() {
-    return this.artist.charAt(1);
+  //return the ascii value of the first character in the genre
+  public int getCharGenre() {
+    return this.genre.charAt(0);
   }
 }
