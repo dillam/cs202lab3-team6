@@ -3,18 +3,8 @@ import java.io.*;
 
 public class PlaylistProcessor {
 
-  public static void main(String[] args) {
-    Song[] songs = new Song[30];
-    songs = run(songs);
-
-    for (int i = 0; i < 30; i++) {
-      System.out.println(i + ": " + songs[i].getSong());
-    }
-  }
-
+  // parses data file and returns array of song class populated with the songs
   public static Song[] run(Song[] songs) {
-    //Variables
-    int count = 0;
     //File readers
     BufferedReader scanFile = null;
     FileReader file = null;
