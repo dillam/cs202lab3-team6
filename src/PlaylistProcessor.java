@@ -2,19 +2,17 @@ import java.util.*;
 import java.io.*;
 
 public class PlaylistProcessor {
-  //Arrays
-  String[] name = new String[30];
-  String[] artist = new String[30];
-  String[] genre = new String[30];
-  int[] year = new int[30];
-  int[] rank = new int[30];
 
   public static void main(String[] args) {
-    PlaylistProcessor play = new PlaylistProcessor();
-    play.run(args);
+    Song[] songs = new Song[30];
+    songs = run(songs);
+
+    for (int i = 0; i < 30; i++) {
+      System.out.println(i + ": " + songs[i].getSong());
+    }
   }
 
-  public void run (String[] args) {
+  public static Song[] run(Song[] songs) {
     //Variables
     int count = 0;
     //File readers
@@ -23,20 +21,21 @@ public class PlaylistProcessor {
     try {
       file = new FileReader("data/playlist.txt");
       scanFile = new BufferedReader(file);
-      String tempLine;
+      String name, artist, genre;
+      int year, rank;
+      String[] song;
 
-      while ((tempLine = scanFile.readLine()) != null) {
-        String[] lineSplit = tempLine.split(", ");
-        name[count] = lineSplit[0];
-        artist[count] = lineSplit[1];
-        genre[count] = lineSplit[2];
-        year[count] = Integer.parseInt(lineSplit[3]);
-        rank[count] = Integer.parseInt(lineSplit[4]);
-        count++;
-      } //while loop
+      for (int i = 0; i < 30; i++) {
+        song = scanFile.readLine().split(",");
+        songs[i] = new Song(song[0], song[1], song[2], Integer.parseInt(song[3]), Integer.parseInt(song[4]));
+      }
+
+      return songs;
+
     } //try
     catch (IOException e) {
       e.printStackTrace();
+      return songs;
     } //catch
     finally {
 			try {
@@ -45,35 +44,14 @@ public class PlaylistProcessor {
 
 				if (file != null)
 					file.close();
+
+        return songs;
 			} //try
       catch (IOException ex) {
 				ex.printStackTrace();
+        return songs;
 			} //catch
     } //finally
   } //run
-
-  public String[] getName() {
-    return name;
-  } //getName
-
-  //return the artist
-  public String[] getArtist() {
-    return artist;
-  } //getArtist
-
-  //return the genre
-  public String[] getGenre() {
-    return genre;
-  } //getGenre
-
-  //return the year
-  public int[] getYear() {
-    return year;
-  } //getYear
-
-  //return the rank
-  public int[] getRank() {
-    return rank;
-  } //getRank
 
 } //class

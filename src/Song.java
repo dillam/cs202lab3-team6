@@ -53,4 +53,9 @@ public class Song {
   public int getCharGenre() {
     return this.genre.charAt(0);
   }
+
+  //return a string of all the information of the song
+  public String getSong() {
+    return name + ", " + artist + ", " + genre + ", " + year + ", " + rank;
+  }
 }
